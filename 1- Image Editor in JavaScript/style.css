@@ -20,6 +20,10 @@ body {
     padding: 30px 35px 35px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+.container.disabel :where(.editor-panel, .reset-filter, .save-img) {
+    opacity: 0.6;
+    pointer-events: none;
+}
 .container h2 {
     font-size: 22px;
     font-weight: 500;
@@ -35,6 +39,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
 .editor-panel .title {
     display: block;
     font-size: 16px;
@@ -101,6 +106,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: 20px; 
+    overflow: hidden;
 }
 
 .preview-img img {
@@ -109,6 +115,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    cursor: pointer;
 }
 
 .controls button {

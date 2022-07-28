@@ -14,17 +14,17 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="container disabel">
         <h2>Easy Image Editor</h2>
         <div class="wrapper">
             <div class="editor-panel">
                 <div class="filter">
                     <label for="title">Filters</label>
                     <div class="options">
-                        <button class="active">Brightness</button>
-                        <button>Saturation</button>
-                        <button>Inversion</button>
-                        <button>Grayscale</button>
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
                     </div>
                     <div class="slider">
                         <div class="filter-info">
@@ -37,10 +37,10 @@
                 <div class="rotate">
                     <label for="title">Rotate & Flip</label>
                     <div class="options">
-                        <button><i class="fa-solid fa-rotate-left"></i></button>
-                        <button><i class="fa-solid fa-rotate-right"></i></button>
-                        <button><i class="bx bx-reflect-vertical"></i></button>
-                        <button><i class="bx bx-reflect-horizontal"></i></button>
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="vertical"><i class="bx bx-reflect-horizontal"></i></button>
                     </div>
                 </div>
             </div>
@@ -51,11 +51,15 @@
         <div class="controls">
             <button class="reset-filter">Reset Filters</button>
             <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
                 <button class="choose-img">Choose Image</button>
                 <button class="save-img">Save Image</button>    
             </div>
         </div>
     </div>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
